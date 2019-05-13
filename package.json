@@ -1,0 +1,25 @@
+{
+  "name": "concorde-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "yarn run htmlhint",
+    "build-sass": "yarn sass ."
+  },
+  "repository": "git+https://github.com/nology-tech/student-cv-feb-2019.git",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nology-tech/student-cv-feb-2019/issues"
+  },
+  "homepage": "https://github.com/nology-tech/student-cv-feb-2019#readme",
+  "devDependencies": {
+    "htmlhint": "^0.11.0",
+    "sass": "^1.17.3"
+  },
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}

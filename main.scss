@@ -1,0 +1,230 @@
+$textColor: #d9ecc5;
+$myBackgroundColor: #000000;
+$consistentSpacing:10px;
+$myBorder: 0.8px solid white;
+$myContrast: contrast(40%);
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    width:100vw;
+    height:$consistentSpacing*21;
+    overflow: hidden;
+    position:fixed;
+    transition:0.15s;
+    z-index:1000;
+
+    div {
+        float:left;
+        width:33.3%;
+        height:100%;
+        margin:0;
+
+        img {
+            width:200%;
+            // -webkit-filter: grayscale(100%);
+            -webkit-filter: $myContrast;
+        }
+    }
+}
+
+body {
+    margin :0;
+    background-color: $myBackgroundColor;
+    color:white;
+
+    }
+    main {
+        width:100vw;
+        height:auto;
+        padding-top:$consistentSpacing*21;
+        margin-bottom: $consistentSpacing*2;
+        display:grid;
+        grid-template-columns: $consistentSpacing*34 auto $consistentSpacing*34; 
+        grid-template-areas: 
+        "news social wiki";
+
+        section {
+            width:auto;
+            margin:$consistentSpacing;
+            margin-top:$consistentSpacing*3;
+
+            }
+
+            .wiki-info-box {
+                grid-area: wiki;
+                overflow:hidden;
+                display:flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-right: $consistentSpacing*2;
+                padding:$consistentSpacing;
+                border-left: $myBorder;
+
+                p {
+                    font-size:0.7em;
+                }
+
+                h1 {
+                    font-size:1.3em;
+                    margin-top:0;
+                }
+                .info {
+                    height:200px;
+                    margin-bottom:$consistentSpacing;
+                    display:grid;
+                    grid-template-columns: 1fr 3fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+                    grid-template-areas:
+                    "location loc-info"
+                    "area are-info"
+                    "date dat-info"
+                    "visitors vis-info"
+                    "body bod-info";
+
+                    h2 {
+                        font-size:0.7em;
+                        margin:0;
+                        padding:$consistentSpacing;
+                    }
+                    p {
+                        margin:0;
+                        font-size:0.7em;
+                        padding:$consistentSpacing;
+                    }
+                    #location {
+                        grid-area:location;
+                    }
+                    #area {
+                        grid-area:area;
+                    }
+                    #establish {
+                        grid-area: date;
+                    }
+                    #visitors {
+                        grid-area: visitors;
+                    }
+                    #body {
+                        grid-area: body;
+                    }
+                    #location-desc {
+                        grid-area:loc-info;
+                    }
+                    #area-desc {
+                        grid-area:are-info;
+                    }
+                    #establish-desc {
+                        grid-area: dat-info;
+                    }
+                    #visitors-desc {
+                        grid-area: vis-info;
+                    }
+                    #body-desc {
+                        grid-area: bod-info;
+                    }
+                }
+                
+            }
+
+            .wiki-info-box > div:nth-of-type(1) {
+                height:$consistentSpacing*15;
+                overflow: hidden;
+
+                img {
+                    width:200%;
+                }
+            }
+
+            .wiki-info-box div img {
+                -webkit-filter: grayscale(100%);
+                -webkit-filter: $myContrast;
+                width:auto;
+            }
+
+            .wiki-info-box > p {
+                text-align: center;
+            }
+            .side-info {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .social-media {
+                grid-area: social;
+                padding:$consistentSpacing;
+            }
+
+                .social-media > div:nth-of-type(1) {
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    h2 {
+                        font-size: 0.8em;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 0.7em;
+                    }
+                    img {
+                        width:100%;
+                        align-self: flex-end;
+                    }
+                }
+
+
+            .news {
+                grid-area:news;
+                margin-left: $consistentSpacing*2;
+                border-right: $myBorder;
+                padding:$consistentSpacing;
+
+                div {
+                    width:auto;
+                    height:100%;
+                    display: flex;
+                    flex-direction:column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    article {
+                        height:auto;
+                        border-bottom: $myBorder;
+
+                        h2 {
+                            font-size: 0.8em;
+                            font-weight: 600;
+                        }
+                        p {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+
+            .theme-choice {
+                margin-top:0;
+                position:fixed;
+              
+                div {
+                  background-color:white;
+                  width:30px;
+                  height:30px;
+                }
+        }
+    }
+
+        .smallNav {
+            width:100vw;
+            overflow: hidden;
+            height:$consistentSpacing*13;
+        }
